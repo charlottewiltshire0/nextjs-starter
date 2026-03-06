@@ -1,0 +1,35 @@
+name: WelcomeBot
+
+on:
+  pull_request_target:
+    branches: [master]
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  welcome:
+    name: Welcome First Time Contributors
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: zephyrproject-rtos/action-first-interaction@1d8459ca65b335265f1285568221e229d45a995e
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: |
+            Hello, and thank you for contributing to the <repo> website! 🎉
+
+            Here’s what will happen next:
+            1. Our team will review your pull request and might provide feedback or request changes.
+               Don’t hesitate to ask if you have any questions or need help addressing feedback!
+
+            2. Once approved, your contribution will be merged and become part of the <repo> community. 🥳
+
+            Thank you for your effort, and welcome aboard! 🚀
+          issue-message: |
+            Hello, and thank you for creating an issue on the <repo> website! 🎉
+
+            We’ve received your report, and our team will review it soon. If you have more information to share or if you'd like to provide further context, please feel free to comment below!
+
+            We’re happy to have you contributing to <repo>, and we’ll keep you updated as we work on resolving this. 🚀

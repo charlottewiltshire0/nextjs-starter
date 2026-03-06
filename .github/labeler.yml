@@ -1,0 +1,21 @@
+"feature":
+  - head-branch: "^feat\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+  - head-branch: "^feature\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+"fix":
+  - head-branch: "^fix\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+"documentation":
+  - head-branch: "^docs\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+"style":
+  - head-branch: "^style\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+"refactor":
+  - head-branch: "^refactor\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+"test":
+  - head-branch: "^test\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+"chore":
+  - head-branch: "^chore\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
